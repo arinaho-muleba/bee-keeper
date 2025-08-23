@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Worker-Bee</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bee Keeper</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <h2>🐝 Bee keeper</h2>
-  <button id="summarise">Summarise Section</button>
-  <button id="quiz">Generate Quiz</button>
-  <button id="flashcards">Make Flashcards</button>
-  <div id="output"></div>
+<body class="border-none">
+
+  <div class="w-full">
+
+    <!-- Header -->
+    <header class="flex justify-center items-center flex-col mb-6">
+      <img id="logo" src="/images/logo-with-text.png" class="w-24 h-24 mb-3"/>
+      <h3 class="text-gray-700">Helping the hive.</h3>
+    </header>
+
+    <!-- Buttons -->
+    <div class="flex flex-col gap-4 justify-center mb-6">
+      <button id="summarise" class="flex-1 min-w-[200px] px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-xl shadow-md transition transform active:scale-95">
+        Summarise Section
+      </button>
+      <button id="quiz" class="flex-1 min-w-[200px] px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-xl shadow-md transition transform active:scale-95">
+        Generate Quiz
+      </button>
+      <button id="flashcards" class="flex-1 min-w-[200px] px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-xl shadow-md transition transform active:scale-95">
+        Make Flashcards
+      </button>
+    </div>
+
+    <!-- Output -->
+<div id="output" class="mt-6 p-4 bg-white rounded-2xl shadow-md text-gray-700 text-sm min-h-[150px] flex justify-center items-center">
+  <img id="loadingBee" src="/images/logo1.png" class="w-16 h-16 animate-bounce hidden"/>
+  <div id="contentArea" class="w-full"></div>
+</div>
+
+
+  </div>
 
   <script src="popup.js"></script>
 </body>
