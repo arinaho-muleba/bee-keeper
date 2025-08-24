@@ -6,7 +6,7 @@ Easily manage and interact with your worker bees right from Chrome.
 
 ## 🚀 Installation Guide
 
-1. [Download the source zip](./link-to-zip)  
+1. [Download the source zip](https://github.com/arinaho-muleba/bee-keeper/archive/refs/tags/latest.zip)  
 2. Extract (unzip) the file  
 3. Open **Google Chrome** and go to `chrome://extensions/`  
 4. Toggle **Developer mode** (top-right corner)  
