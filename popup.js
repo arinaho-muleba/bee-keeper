@@ -19,11 +19,11 @@ document.getElementById("summarise").addEventListener("click", async () => {
 });
 
 document.getElementById("quiz").addEventListener("click", async () => {
-  sendMessageToContent("quiz");
+  sendMessageToContent("quiz", document.getElementById("difficulty").value);
     showLoader("Busy generating your quiz...");
 });
 
-function sendMessageToContent(action) {
+function sendMessageToContent(action,difficulty) {
   chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
     chrome.scripting.executeScript({
       target: { tabId: tabs[0].id },

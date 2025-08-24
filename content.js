@@ -59,7 +59,7 @@ window.addEventListener("message", async (event) => {
 
       try {
         const response = await fetch(
-          //"http://127.0.0.1:5001/bee-keeper-57fbe/us-central1/generate",
+         //"http://127.0.0.1:5001/bee-keeper-57fbe/us-central1/generate",
           "https://us-central1-bee-keeper-57fbe.cloudfunctions.net/generate",
           {
             method: "POST",
@@ -68,6 +68,7 @@ window.addEventListener("message", async (event) => {
               type: apiType,
               content: sectionText,
               uid: data.deviceId, // ✅ use stored device ID
+              dificulty: action === "quiz" ? event.data.difficulty : undefined, // Pass difficulty only for quiz
             }),
           }
         );
@@ -78,10 +79,12 @@ window.addEventListener("message", async (event) => {
         if (result.link) {
           window.open(result.link, "_blank");
         } else {
+          console.log("No link returned from API");
           alert("Something went wrong. No link returned from API.");
         }
       } catch (err) {
         alert("Error calling API: " + err.message);
+        console.error("Error calling API:", err);
       }
     });
   }

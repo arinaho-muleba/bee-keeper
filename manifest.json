@@ -9,7 +9,9 @@
     "storage"
   ],
   "host_permissions": [
-    "*://the-hive.bbd.co.za/course/*"
+    "*://the-hive.bbd.co.za/course/*",
+    "https://us-central1-bee-keeper-57fbe.cloudfunctions.net/*", 
+    "http://127.0.0.1:5001/bee-keeper-57fbe/us-central1/generate"
   ],
   "background": {
     "service_worker": "background.js"
