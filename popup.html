@@ -4,41 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bee Keeper</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="border-none">
-
-  <div class="w-full">
-
+<body class="border-none rounded-full">
+  <div class="w-full flex flex-col">
     <!-- Header -->
-    <header class="flex justify-center items-center flex-col mb-6">
-      <img id="logo" src="/images/logo-with-text.png" class="w-24 h-24 mb-3"/>
-      <h3 class="text-gray-700">Helping the hive.</h3>
+    <header id="header" class="flex items-center justify-between">
+        <div class="flex gap-4 ">
+         <img id="logo" class="my-auto " src="/Beekeeper-logo.svg"/>
+        <h1 class="">Beekeeper</h1>
+        </div>
+        <div role="button" id="close-btn"> 
+            <img src="close-icon.svg" alt="Close Button"/>
+        </div>
+</span>
     </header>
-
+    <hr>
     <!-- Buttons -->
-    <div class="flex flex-col gap-4 justify-center mb-6">
-      <button id="summarise" class="flex-1 min-w-[200px] px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-xl shadow-md transition transform active:scale-95">
-        Summarise Section
+     <section id="buttons" class="px-2">
+     <h2>Summarise</h2>
+     <p class="mb-4">Create a summary of content you're studying</p>
+    <div id="buttons" class="flex flex-col gap-4 justify-center mb-6">
+      <button id="summarise" class="flex-1 min-w-[200px]">
+        Summarise section
       </button>
-      <button id="quiz" class="flex-1 min-w-[200px] px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-xl shadow-md transition transform active:scale-95">
+       <h2>Test your knowledge</h2>
+     <p>Create a summary of content you are studying</p>
+     <h3>Quiz settings
+        <p>How diffiult would you like the quiz to be?</p>
+     </h3>
+     <select id="difficulty" class="p-2 border border-gray-300 rounded-md w-full">
+        <option value="easy" selected>Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+        </select>
+      <button id="quiz" class="flex-1 min-w-[200px]">
         Generate Quiz
       </button>
-      <button id="flashcards" class="flex-1 min-w-[200px] px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-xl shadow-md transition transform active:scale-95">
-        Make Flashcards
-      </button>
     </div>
+    </section>
 
-    <!-- Output -->
-<div id="output" class="mt-6 p-4 bg-white rounded-2xl shadow-md text-gray-700 text-sm min-h-[150px] flex justify-center items-center">
-  <img id="loadingBee" src="/images/logo1.png" class="w-16 h-16 animate-bounce hidden"/>
-  <div id="contentArea" class="w-full"></div>
+        <!-- Loading-->
+    <div id="loaderContainer" class="hidden flex flex-col gap-4 justify-center mb-6 items-center">
+        <iframe class="w-16 h-16" src="https://lottie.host/embed/b17e6e37-ae43-43c8-b6f0-d05e5e97f694/AkMxclBpwv.lottie"></iframe>
+        <div id="loaderText" class="text-gray-700">Busy generating your quiz...</div>
+    </div>
+    <!--In wrong websit-->
+    <div id="wrongSite" class="hidden flex flex-col gap-4 justify-center mb-6 items-center">
+      <h2>Sorry, we can't generate from here!</h2>
+        <img  src="Cantdothat.svg" alt="Warning Icon"/>
+        <div class="text-gray-700 text-center">If you want to generate a quiz or summary you will need to be in a course page on<a id="the-hive" href="https://the-hive.bbd.co.za/tracks"> the Hive</a></div>
 </div>
-
-
   </div>
-
   <script src="popup.js"></script>
 </body>
 </html>

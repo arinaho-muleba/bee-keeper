@@ -1,10 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Titillium+Web:wght@400;600;700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  width: 500px;
+  font-family: "Inter", sans-serif;
+  width: 300px;
   padding: 10px;
+  text-align: start;
+}
+
+h1,h2,h3 {
+    font-family: "Titillium Web", sans-serif;
 }
 #logo {
-  width: 100px;
+  width: 30px;
   height: auto;
   margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  border-radius: 4px;
+  background: #F47000;
+  color: var(--White, #FFF);
+  padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    max-width: max(80%, 200px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+  background-color: #FFA500;
+}
+
+h1 {
+color: #000;
+font-family: "Titillium Web";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+h2 {
+color: #000;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+h3{
+color: #000;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+p {
+color: #000;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+
+hr {
+    border-radius: 24px;
+    background: #FFE4CD;
+    height: 2px;
+}
+
+#close-btn {
+    padding: 3px;
+height: 20px;
+width: 20px;
+border-radius: 20px;
+background: linear-gradient(180deg, #EB6150 0%, #EB6151 100%);
+}
+
+a {
+    color: #F47000;
+    text-decoration: underline;
+    font-weight: 500;
 }
